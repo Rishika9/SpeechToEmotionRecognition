@@ -1,0 +1,100 @@
+body{
+  overflow-x: hidden;
+}
+.text {
+  font-size: 3rem;
+  text-align: center;
+  font-family: serif;
+}
+.text i{
+  color:#49c8f2;
+}
+@keyframes Bounce1 {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(8px);
+  }
+  50%{
+    transform: translateY(-8px);
+  }
+  75%{
+    transform: translateY(4px);
+  }
+  100%{
+    transform: translateY(-4px);
+  }
+}
+.bounce1{
+  font-size: 2.5rem;
+    animation: Bounce1 1.5s ease-in-out  infinite alternate;
+}
+@keyframes Bounce2 {
+  0%{
+    transform: translateY(-2.5px);
+  }
+  25%{
+    transform: translateY(2.5px);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+  75%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+.bounce2{
+  font-size: 2.5rem;
+    animation: Bounce2 2s ease-in-out  infinite alternate;
+}
+.box1{
+  background-color: #49c8f2;
+  height: 300px;
+  width:1100px;
+  position: relative;
+  left:15%;
+}
+.box2{
+  background-color: #42b4d9;
+  height: 260px;
+  width:1060px;
+  position: relative;
+  left:1.5%;
+  top:4%;
+  border: 4px dashed lightgrey;
+}
+.image{
+  position: relative;
+  font-size: 4rem;
+  top:10%;
+  left:50%;
+  color: white;
+}
+.file{
+  position: relative;
+  font-size: 1.5rem;
+  top:20%;
+  left:35%;
+  display: block;
+  color:white;
+}
+.upload{
+  position: relative;
+  top:30%;
+  display: block;
+  font-size: 1.5rem;
+  left:47%;
+  background-color:white;
+  font-family: cursive;
+}
+.new-file{
+  position: relative;
+  font-size: 2rem;
+  top:20%;
+  left:30%;
+  color:white;
+}
