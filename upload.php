@@ -69,10 +69,25 @@ function saveAudio($fileName){
           <i class="fas fa-poll"></i>
         </div>
         <div class="new-file">
-        <div>The Person might be <?php  echo $ans1;?><div>
+        <div>The Person might be <?php  echo $ans1;?></div>
         <div>The accuracy of the model is  <?php  echo $ans2;?> </div>
           </div>
       </div>
     </div>
+    <p>ewonforjenfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+    <div class="footer-dark">
+          <footer>
+            <div class="container-fluid" style="font-size: 20px;">
+        <i class="social-icon fab fa-facebook-f"></i>
+        <i class="social-icon fab fa-twitter"></i>
+        <i class="social-icon fab fa-instagram"></i><br>
+      </div>
+              <div class="container">
+                  <pre class="copyright">Adwet Ojha     Rishika Patel     Sachin Gupta     Yashaswa Jain</pre>
+              </div>
+          </footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
