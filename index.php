@@ -1,4 +1,8 @@
-
+<?php
+$output="";
+$command = escapeshellcmd('python abc.py &');
+  $output = shell_exec($command);
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
