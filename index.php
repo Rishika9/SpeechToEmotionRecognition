@@ -7,7 +7,8 @@ $command = escapeshellcmd('python abc.py &');
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title></title>
+   <link rel="icon" href="logo.jpg" type = "image/x-icon">
+  <title>Speech To Emotion Recognition</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -16,6 +17,8 @@ $command = escapeshellcmd('python abc.py &');
   <div class="text">
     <h2>
       <i class="fas fa-language"></i> Speech To Em<i class="far fa-laugh-beam bounce1"></i>ti<i class="fas fa-angry bounce2"></i>n Recognition
+      <p class="mono">Note : The soundfile must be a monotone. Monotone refers to a sound, for example music or speech, that has a single unvaried tone.</p>
+
     </h2>
   </div>
   <form action="upload.php" method="post" enctype="multipart/form-data">
