@@ -1,3 +1,4 @@
+#Importing the libraries
 import librosa
 import soundfile
 import os, glob
@@ -7,6 +8,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 import pickle
 
+#Extracting features from monotonic audio files - mfcc, mel, chroma
 def extract_feature(file_name,mfcc,chroma,mel):
   with soundfile.SoundFile(file_name) as sound_file:
     X=sound_file.read(dtype="float32")
@@ -25,7 +27,7 @@ def extract_feature(file_name,mfcc,chroma,mel):
       result=np.hstack((result,mels))
     return result
 
-
+#list of all emotions
 emotions={
   '01':'neutral',
   '02':'calm',
@@ -36,7 +38,7 @@ emotions={
   '07':'disgust',
   '08':'surprised'
 }
-
+#List of observed emotions that will be displayed in the o/p
 observed_emotions=['calm', 'happy','angry', 'fearful', 'disgust']
 
 #Loading the data received from the user and predicting the output
