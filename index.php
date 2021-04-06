@@ -1,4 +1,5 @@
 <?php
+// Running the python file using the shell command on terminal on backend
 $output="";
 $command = escapeshellcmd('python abc.py &');
   $output = shell_exec($command);
@@ -21,6 +22,7 @@ $command = escapeshellcmd('python abc.py &');
 
     </h2>
   </div>
+  <!-- form to take the user's input-->
   <form action="upload.php" method="post" enctype="multipart/form-data">
     <div class=" box1">
       <div class="box2">
@@ -33,6 +35,7 @@ $command = escapeshellcmd('python abc.py &');
     </div>
   </form>
   <hr class="hr" style="height:2px;border-width:0;color:gray;background-color:gray">
+  <!-- Steps on which the MLP Classifier is working -->
   <div class="box">
   <h1 id="a4dc" class="steps" data-selectable-paragraph="">Step 1 — Libraries</h1>
   <div class="cont">
@@ -67,6 +70,7 @@ $command = escapeshellcmd('python abc.py &');
 
 <hr class="hr" style="height:2px;border-width:0;color:gray;background-color:gray">
 
+<!-- footer -->
   <div class="footer-dark">
         <footer>
           <div class="container-fluid" style="font-size: 20px;">

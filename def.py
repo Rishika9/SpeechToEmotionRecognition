@@ -39,23 +39,27 @@ emotions={
 
 observed_emotions=['calm', 'happy','angry', 'fearful', 'disgust']
 
-
+#Loading the data received from the user and predicting the output
 def load_new_data():
     x,y=[],[]
     for file in glob.glob("C:\\xampp\\www\\SpeechToEmotion\\uploads\\*.wav"):
         file_name=os.path.basename(file)
         emotion=emotions[file_name.split("-")[2]]
-    
+
         feature=extract_feature(file, mfcc=True, chroma=True, mel=True)
         x.append(feature)
         y.append(emotion)
     return np.array(x),y
 
+
 xx_test,yy_test=load_new_data()
+#Getting the model and accuracy from abcd.pickle file
 pickle_off = open("abcd.pickle","rb")
 model,accuracy = pickle.load(pickle_off)
+
+#Predicting the result
 yy_pred=model.predict(xx_test)
+
 
 print(yy_pred[len(yy_pred)-1])
 print(" {:.2f}".format(accuracy*100))
-# accuracy=accuracy_score(y_true=y_test, y_pred=y_pred)

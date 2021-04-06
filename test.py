@@ -1,3 +1,4 @@
+#Import all the necessary modules
 import librosa
 import soundfile
 import os, glob
@@ -7,6 +8,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 import pickle
 
+#Extracting features from monotonic audio files - mfcc, mel, chroma
 def extract_feature(file_name,mfcc,chroma,mel):
   with soundfile.SoundFile(file_name) as sound_file:
     X=sound_file.read(dtype="float32")
@@ -26,7 +28,7 @@ def extract_feature(file_name,mfcc,chroma,mel):
     return result
 
 
-
+#List of all emotions
 emotions={
   '01':'neutral',
   '02':'calm',
@@ -38,10 +40,11 @@ emotions={
   '08':'surprised'
 }
 
+#List of observed emotions that will be displayed in the o/p
 observed_emotions=['calm', 'happy','angry', 'fearful', 'disgust']
 
 
-
+#Getting the dataset and spilitting into train and test
 def load_data(test_size=0.25):
     x,y=[],[]
     for file in glob.glob("C:\\xampp\\www\\SpeechToEmotion\\dataset\\Actor_*\\*.wav"):
@@ -56,6 +59,7 @@ def load_data(test_size=0.25):
 
 x_train,x_test,y_train,y_test=load_data(test_size=0.25)
 
+#MLP Classifier with 300 hidden layers and batch size = 256
 model=MLPClassifier(alpha=0.01, batch_size=256, epsilon=1e-08, hidden_layer_sizes=(300,), learning_rate='adaptive', max_iter=500)
 
 model.fit(x_train,y_train)
